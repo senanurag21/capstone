@@ -64,8 +64,4 @@ public class MovieService {
 	public void removeMovie(int movieId) {
 		repo.deleteById(movieId);
 	}
-	
-//	public void removeMovie(Movie movie) {
-//		repo.delete(movie);
-//	}
 }
