@@ -41,7 +41,7 @@ public class CapstoneApplication implements CommandLineRunner {
 		Scanner scan 	= new Scanner(System.in);
 		
 		////////Insert Director & Movies
-		Movie eMovie = new Movie(6, "RRR", "2022-01-01", "2022-01-01 18:27:22");
+		Movie eMovie = new Movie(8, "Bhahubali 2", LocalDate.now(), LocalDateTime.now());
 		Director eDirector = new Director(3, "SS", "Rajamouli", "Dir Address Three", 1111111113, "rajamouli@mail.com");
 		eMovie.getDirector().add(eDirector);
 		eDirector.getMovie().add(eMovie);
@@ -138,20 +138,18 @@ public class CapstoneApplication implements CommandLineRunner {
 		
 
 		////////- Update new release date based on the movie title
-		////////Update the new release date for the existing movie and display appropriate error messages for invalid details.
+		////////Update the new release date for the existing movie and display appropriate error messages for invalid details.		
 //		System.out.println("Name of Movie : ");
-//		String movName 		= scan.nextLine();
+//		String movName 			= scan.nextLine();
 //		Movie srchMov = movieService.getMovieByName(movName);
 //		System.out.println(srchMov.getMovieTitle());
 //		System.out.println("Release date of " + srchMov.getMovieTitle() + " : " + srchMov.getDateReleased());
 //		System.out.println("New Release Date (yyyy-mm-dd) : ");
-//		String newDate = scan.nextLine();
-//		movieService.updateMovieReleaseDate(srchMov.getMovieId(), newDate);
+//		String newDate 			= scan.nextLine();
+//        LocalDate releaseDate 	= LocalDate.parse(newDate);
+//		movieService.updateMovieReleaseDate(srchMov.getMovieId(), releaseDate);
 //		System.out.println("Movie Release Date Updated Successfully !!!");
-////		String dateFormat = "YYYY-MM-DD";
-////		Date newDate = new SimpleDateFormat(dateFormat).parse(scan.nextLine());
-////		System.out.println(newDate);
-////		System.out.println(newDate.toString());
+
 
 		
 	
@@ -161,7 +159,6 @@ public class CapstoneApplication implements CommandLineRunner {
 //		Movie eMovie	= movieService.getMovieByName(movName);
 //		movieService.removeMovie(eMovie.getMovieId());
 //		System.out.println("Movie Deleted Successfully !!!");
-		
 		
         scan.close();
         

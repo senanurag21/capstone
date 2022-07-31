@@ -44,7 +44,7 @@ public class Director {
 
 	public Director() { }
 	
-	public Director(int id, String firstName, String lastName, String address, 
+	public Director(Integer id, String firstName, String lastName, String address, 
 			Integer contactNumber, String email) {		
 		super();
 		this.directorId			= id;

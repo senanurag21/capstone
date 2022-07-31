@@ -1,6 +1,8 @@
 package com.capstone.entity;
 
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -27,10 +29,10 @@ public class Movie {
 	private String movieTitle;
 	
 	@Column(columnDefinition="DATE DEFAULT CURRENT_DATE")
-	private String dateReleased;
+	private LocalDate dateReleased;
 	
 	@Column(columnDefinition="DATETIME DEFAULT CURRENT_DATE")
-	private String movieRunningTime;
+	private LocalDateTime movieRunningTime;
 	
 	
 	@ManyToMany(cascade = { CascadeType.DETACH, CascadeType.PERSIST, 
@@ -40,9 +42,10 @@ public class Movie {
 	  joinColumns = @JoinColumn(name = "movie_id"), 
 	  inverseJoinColumns = @JoinColumn(name = "director_id"))
 	Set<Director> director  = new HashSet<>();
-	
+
 	public Movie() { }
-	public Movie(int id, String name, String dateReleased, String movieRunningTime) {
+	
+	public Movie(Integer id, String name, LocalDate dateReleased, LocalDateTime movieRunningTime) {
 		super();
 		this.movieId			= id;
 		this.movieTitle			= name;
@@ -66,19 +69,19 @@ public class Movie {
 		this.movieTitle = movieTitle;
 	}
 
-	public String getDateReleased() {
+	public LocalDate getDateReleased() {
 		return dateReleased;
 	}
 
-	public void setDateReleased(String dateReleased) {
+	public void setDateReleased(LocalDate dateReleased) {
 		this.dateReleased = dateReleased;
 	}
 
-	public String getMovieRunningTime() {
+	public LocalDateTime getMovieRunningTime() {
 		return movieRunningTime;
 	}
 
-	public void setMovieRunningTime(String movieRunningTime) {
+	public void setMovieRunningTime(LocalDateTime movieRunningTime) {
 		this.movieRunningTime = movieRunningTime;
 	}
 

@@ -1,5 +1,6 @@
 package com.capstone.service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -57,7 +58,7 @@ public class MovieService {
 		return repo.customGetMovieByDirectorName(dirFirstName, dirLastName);
 	}
 	
-	public void updateMovieReleaseDate(int id, String newDate) {
+	public void updateMovieReleaseDate(int id, LocalDate newDate) {
 		repo.customUpdateMovieReleaseDate(id, newDate);
 	}
 	

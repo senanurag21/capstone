@@ -1,5 +1,6 @@
 package com.capstone.repository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +33,6 @@ public interface MovieRepository extends JpaRepository<Movie, Integer>{
 			+ "WHERE movie_id	= :movie_id", nativeQuery = true)
 	@Modifying
 	@Transactional
-	public int customUpdateMovieReleaseDate(@Param("movie_id") int id, @Param("date_released") String newDate);
+	public int customUpdateMovieReleaseDate(@Param("movie_id") int id, @Param("date_released") LocalDate newDate);
 
 }

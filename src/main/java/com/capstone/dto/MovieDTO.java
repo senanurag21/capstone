@@ -1,12 +1,15 @@
 package com.capstone.dto;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class MovieDTO {
 	private Integer movieId;
 	private String movieTitle;
-	private String dateReleased;
-	private String movieRunningTime;
+	private LocalDate dateReleased;
+	private LocalDateTime movieRunningTime;
 
-	public MovieDTO(int id, String name, String dateReleased, String movieRunningTime) {
+	public MovieDTO(int id, String name, LocalDate dateReleased, LocalDateTime movieRunningTime) {
 		super();
 		this.movieId			= id;
 		this.movieTitle			= name;
@@ -29,19 +32,19 @@ public class MovieDTO {
 		this.movieTitle = movieTitle;
 	}
 
-	public String getDateReleased() {
+	public LocalDate getDateReleased() {
 		return dateReleased;
 	}
 
-	public void setDateReleased(String dateReleased) {
+	public void setDateReleased(LocalDate dateReleased) {
 		this.dateReleased = dateReleased;
 	}
 
-	public String getMovieRunningTime() {
+	public LocalDateTime getMovieRunningTime() {
 		return movieRunningTime;
 	}
 
-	public void setMovieRunningTime(String movieRunningTime) {
+	public void setMovieRunningTime(LocalDateTime movieRunningTime) {
 		this.movieRunningTime = movieRunningTime;
 	}
 
